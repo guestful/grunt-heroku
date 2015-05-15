@@ -15,7 +15,7 @@ module.exports = (grunt) ->
     grunt.util.spawn
       cmd: 'git'
       grunt: false
-      args: ['push', remote, branch]
+      args: ['push', '-f', remote, branch + ':master']
       opts:
         stdio: 'inherit'
     , (error, result, code) ->
